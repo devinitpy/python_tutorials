@@ -10,7 +10,8 @@ richard_scores=file_location2
 
 
 files=[keith_scores,Sophie_scores,richard_scores]
-
+#list that will contain each students data
+data = []
 #opening the files
 def open_file(files):
     file=open(files, "r")
@@ -23,5 +24,10 @@ for i in range (0,3):
     current_file=files[i]
     i=i+1
     d=open_file(current_file)
-print (d)
+    #add the returned data to the data list
+    data.append(d);
+    
+print ("Keiths data "+ str(data[0]))
+print ("sophies data "+ str(data[1]))
+print ("richards data "+ str(data[2]))
 
